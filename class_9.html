@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .abc{
+            border: 20px solid;
+        }
+
+        .bcd{
+            border: 20px solid;
+            padding: 40px;
+            position: relative 30%;
+            top: 30%, margin=30px;
+        }
+    </style>
+</head>
+<body>
+    <!-- <form onclick="alert(form)" >
+    <div onclick="alert(div)">
+    <p onclick="alert(p)"></p>
+</div>
+    </form> -->
+
+    <!-- <form id="myForm" class="abc">Form
+    <div id="myDiv" class="abc">Div
+        <p id="myP" class="abc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam est, voluptatibus expedita, laborum a impedit, veritatis laboriosam nesciunt ducimus obcaecati corporis dignissimos ex veniam deleniti fugiat aliquid illo dolorem temporibus?</p>
+    </div>
+</form> -->
+
+<div  id="div1" class="bcd" >
+    <div  id="div2" class="bcd" >
+        <div id="div3" class="bcd">  </div>
+    </div>
+</div>
+
+<script>
+    // myForm.addEventListener(click, function(){
+    //     this.style.borderColor="red"
+    // });
+
+    div1.addEventListener("mouseover",function(){
+        this.style.borderColor="red";
+        this.style.transform="rotate(360deg)";
+        this.style.transition="2s";
+    } );
+</script>
+</body>
+</html>
+
+<!-- 16-feb -->

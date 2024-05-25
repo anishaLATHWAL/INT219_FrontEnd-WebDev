@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activity 4</title>
+    <style>
+        body {
+            background-color: white;
+        }
+        button{
+            background-color: red;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1>DOM Dynamo DIVE</h1>
+    <p id="dynamicText">This is a paragraph.</p>
+    <button id="changeTextDynamically">Change Paragraph Content</button>
+    <button id="toggleButton">Toggle Image</button>
+    <button id="changeBackground">Change Background Color</button>
+    <button id="createElement">Create a New Element</button>
+    <img id="image" src="images.jpg" style="display: none;">
+    <script>
+        // Toggle the visibility of an image with a button click
+        const toggleButton = document.getElementById("toggleButton");
+        const image = document.getElementById("image");
+        toggleButton.addEventListener("click", () => {
+            image.style.display = image.style.display === "none" ? "block" : "none";
+            image.style.width = "500px";
+            image.style.height = "540px";
+        });
+
+        // Change the background color of the website using the button
+        const changeBackgroundButton = document.getElementById("changeBackground");
+        changeBackgroundButton.addEventListener("click", () => {
+            document.querySelector("body").style.backgroundColor = "lightblue";
+        });
+
+        // Change the text content of a paragraph dynamically
+        const changeTextDynamicallyButton = document.getElementById("changeTextDynamically");
+        changeTextDynamicallyButton.addEventListener("click", () => {
+            dynamicText.textContent = "Paragraph Content Changed!";
+        });
+
+        // Create a new element and append it to the document
+        const createElementButton = document.getElementById("createElement");
+        createElementButton.addEventListener("click", () => {
+            const newElement = document.createElement("p");
+            newElement.textContent = "Hello World!!";
+            document.querySelector("body").appendChild(newElement);
+        });
+    </script>
+</body>
+</html>
+

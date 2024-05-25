@@ -1,0 +1,7 @@
+function sum(num1: number, num2: number): number {
+    const sum: number = num1 + num2;
+  
+    return sum;
+  }
+  const result: number = sum(3, 5);
+  console.log(The sum of 3 and 5 is ${result}.);
